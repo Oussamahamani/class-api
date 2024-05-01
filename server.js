@@ -14,7 +14,7 @@ app.use("/posts",postRoutes)
 app.use('/grades', gradeRoutes)
 
 app.get('/', (req, res) => {
-    res.send('Hello,by! (from Server)')
+    res.send('do not say hello')
 })
 
 app.listen(PORT, () => {
