@@ -3,10 +3,13 @@ import express from 'express'
 import db from '../db/conn.js'
 
 import { ObjectId } from 'mongodb'
-
+import { index } from '../controllers/gradesController.js'
 const router = express.Router()
 
 // Get a single grade data
+router.get('/',index)
+
+
 router.get('/:id', async (req, res) => {
     console.log("hit")
     let collection = await db.collection("grades")
